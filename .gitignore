@@ -1,0 +1,11 @@
+# Root-only local environments and temporary outputs
+/.venv/
+/venv/
+/.env
+/.env.local
+/local-config/
+/tmp/
+/logs/
+/outputs/
+/experiment-output/
+/*.log
