@@ -26,6 +26,8 @@ For any future change affecting multiple repositories:
 
 Experimental acceptance requires traceable observations, reliable completion/failure semantics, defined coordinates and intensity handling, and repeatable wavelength-dependent evidence. Distinguish no-hardware tests, hardware smoke checks and scientific mechanism experiments. Report which were actually performed; do not infer one from another.
 
+Keep detailed dated experimental acceptance in the owning member and link to it from the root research status. An integration may combine separately validated source branches; record its own regression/compatibility checks and preserve the experiment's actual acquisition commit. Do not retroactively claim a newly combined version was hardware-tested, or redeploy it to the acquisition host merely because a Meta pin advanced.
+
 ## Complexity control
 
 Unified research management does not merge engineering implementations. The root currently performs no experimental data storage, optical modelling or training, and has no shared Python package, virtual environment, aggregated requirements or root build system.
