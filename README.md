@@ -23,6 +23,10 @@ This root does not store experimental data, implement optical models or run trai
 
 ## Current research status
 
+The current [D0–D1-Data research audit](docs/research/2026-10-19-dataset-audit/README.md) records the 21-band PSF evidence link, dataset acquisition, standardized Face / Non-face ROI production, quality checks and limited oracle baselines. The present task is fixed-candidate-region Face / Non-face; identity recognition and presentation-attack detection are separate tasks. N1 / Deep Unrolling has not been trained. The three-band proxy is not a calibrated RGB baseline.
+
+The following paragraph records the earlier hardware milestone; the latest 21-band report is linked in the audit above without changing this workspace’s accepted Submodule pin.
+
 On 2026-10-17 the UDC-like prototype completed its first real calibration and fixed-display 450/550/650 nm measurement cycle, verified acquisition-to-analysis delivery, and repeated wavelength-response diagnostics. The configured system showed repeatable wavelength-dependent PSF shapes. Separating the display contribution from source, lens and sensor effects, and establishing useful spectral/material task information, remain the next research questions.
 
 The member owns the [dated experimental acceptance and limitations](optic_system/docs/reports/2026-10-17-fixed-display-psf.md) and [local measurement roadmap](optic_system/docs/roadmap.md). The workspace now admits the combined dual-host workflow and acquisition-integrity fixes through its exact gitlink; a newly integrated software version is distinct from the historical experiment's acquisition commit. Raw data, private host configuration and generated experimental outputs remain outside Git.
