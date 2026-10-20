@@ -17,13 +17,16 @@ The current system is a UDC-like laboratory optical prototype, not a commercial 
 
 This Meta Repository is the unified research entry point. It owns research context, planning, experiment acceptance, cross-repository coordination and verified Git Submodule version pins. Engineering implementations remain in independent repositories.
 
-The only current member is **optic_system**: camera/LCD/TLS hardware control, optical calibration, synchronized capture, raw observations, full-frame PSF surveys and dense measured ROI PSFs. Its local setup, data contracts and tests are documented in [its README](optic_system/README.md) and [local AGENTS.md](optic_system/AGENTS.md). Other repositories will be admitted only when a concrete need exists.
+The current members are:
+
+- **optic_system**: camera/LCD/TLS hardware, calibration, capture and measured PSFs. See [README](optic_system/README.md) and [local rules](optic_system/AGENTS.md).
+- **reconstruction**: offline dataset protocols, measured-PSF simulation, spectral representations and task evaluation. See [README](reconstruction/README.md) and [local rules](reconstruction/AGENTS.md). The admission pin restores its existing published initialization; D2 development proceeds independently on `codex/d2-spatial-spectral`. Admission does not claim unpublished research is included in the pin.
 
 This root does not store experimental data, implement optical models or run training. It has no shared Python environment or root build system.
 
 ## Current research status
 
-The current [D0–D1-Data research audit](docs/research/2026-10-19-dataset-audit/README.md) records the 21-band PSF evidence link, dataset acquisition, standardized Face / Non-face ROI production, quality checks and limited oracle baselines. The present task is fixed-candidate-region Face / Non-face; identity recognition and presentation-attack detection are separate tasks. N1 / Deep Unrolling has not been trained. The three-band proxy is not a calibrated RGB baseline.
+The current [D0–D1-Data research audit](docs/research/2026-10-19-dataset-audit/README.md) records the 21-band PSF evidence link, dataset acquisition, standardized Face / Non-face ROI production, quality checks and limited oracle baselines. The present task is fixed-candidate-region Face / Non-face; identity recognition and presentation-attack detection are separate tasks. Subsequent D2 simulation and small N1 unrolling experiments belong to `reconstruction`, with their own versioned reports. The three-band proxy is not a calibrated RGB baseline.
 
 The following paragraph records the earlier hardware milestone; the latest 21-band report is linked in the audit above without changing this workspace’s accepted Submodule pin.
 
@@ -43,7 +46,7 @@ After an ordinary clone:
 git submodule update --init --recursive
 ```
 
-SSH access to both repositories is required. Submodules have independent Git histories and can be cloned and developed without this workspace. The Meta Repository locks each member to a specific commit; it never automatically follows the newest branch commit. The branch in `.gitmodules` identifies the development line, while the committed gitlink determines the restored version.
+SSH access to the root and both member repositories is required. Submodules have independent Git histories and can be cloned and developed without this workspace. The Meta Repository locks each member to a specific commit; it never automatically follows the newest branch commit. The branch in `.gitmodules` identifies the development line, while the committed gitlink determines the restored version.
 
 A restored submodule normally has a detached HEAD. Before changing its code, switch to its development branch or create a feature branch inside that repository. Commit and test there first, verify compatibility, then explicitly update and commit the Meta Repository gitlink. Do not use `git submodule update --remote` as an automatic update workflow.
 

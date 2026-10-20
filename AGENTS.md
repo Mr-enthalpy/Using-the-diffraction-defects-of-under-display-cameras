@@ -10,9 +10,9 @@ Prioritize measurement repeatability, spectral information gain and task-level v
 
 This Meta Repository owns overall research direction, research roadmap, experiment-level acceptance criteria, cross-repository coordination, integration verification and Git Submodule version pins. Keep research decisions and integration context here when needed; do not add speculative stages or empty member directories.
 
-The only admitted member, `optic_system`, owns camera/LCD/TLS hardware, calibration, capture, raw measurements, full-frame/ROI PSFs and local hardware/data tests. Its code and Git history remain independent. Do not move member implementations into the root or copy source between repositories.
+`optic_system` owns camera/LCD/TLS hardware, calibration, capture, raw measurements, full-frame/ROI PSFs and local hardware/data tests. `reconstruction` owns offline dataset protocols, measured-PSF simulation, spectral representation estimation and task evaluation. Both members keep independent code, environments and Git histories. Do not move member implementations into the root or copy source between repositories.
 
-This file governs cross-repository research and collaboration. `optic_system/AGENTS.md` governs local implementation, device boundaries, tests and data contracts. Read and respect both levels before changing a member. Maintain specific development progress once in its owning repository; do not duplicate the same progress table across instruction files.
+This file governs cross-repository research and collaboration. Each member's `AGENTS.md` governs local implementation, boundaries, tests and data contracts. Read and respect both levels before changing a member. Maintain specific development progress once in its owning repository; do not duplicate the same progress table across instruction files.
 
 ## Cross-repository changes
 

@@ -2,3 +2,7 @@
 	path = optic_system
 	url = git@github.com:Mr-enthalpy/optic_system.git
 	branch = udc-main
+[submodule "reconstruction"]
+	path = reconstruction
+	url = git@github.com:Mr-enthalpy/reconstruction.git
+	branch = main
