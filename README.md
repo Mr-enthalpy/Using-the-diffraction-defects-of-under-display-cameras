@@ -20,7 +20,7 @@ This Meta Repository is the unified research entry point. It owns research conte
 The current members are:
 
 - **optic_system**: camera/LCD/TLS hardware, calibration, capture and measured PSFs. See [README](optic_system/README.md) and [local rules](optic_system/AGENTS.md).
-- **reconstruction**: offline dataset protocols, measured-PSF simulation, spectral representations and task evaluation. See [README](reconstruction/README.md) and [local rules](reconstruction/AGENTS.md). The admission pin restores its existing published initialization; D2 development proceeds independently on `codex/d2-spatial-spectral`. Admission does not claim unpublished research is included in the pin.
+- **reconstruction**: offline dataset protocols, measured-PSF simulation, spectral representations and task evaluation. See [README](reconstruction/README.md) and [local rules](reconstruction/AGENTS.md). The admission pin restores its existing published initialization; D2 development proceeds independently on `codex/d2-spatial-spectral`. The admission pin does not include the separate research branch.
 
 This root does not store experimental data, implement optical models or run training. It has no shared Python environment or root build system.
 
@@ -51,3 +51,12 @@ SSH access to the root and both member repositories is required. Submodules have
 A restored submodule normally has a detached HEAD. Before changing its code, switch to its development branch or create a feature branch inside that repository. Commit and test there first, verify compatibility, then explicitly update and commit the Meta Repository gitlink. Do not use `git submodule update --remote` as an automatic update workflow.
 
 [Root AGENTS.md](AGENTS.md) defines research coordination; member instructions define local implementation and testing. Software tests do not establish the optical mechanism or replace real hardware validation.
+
+## Research branch for review
+
+The [D2 report](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d2-spatial-spectral/docs/reports/2026-10-20-d2/README.md)
+and [revised architecture](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d2-spatial-spectral/docs/architecture.md)
+are maintained on the independent reconstruction research branch. The approved
+baseline separates task-independent spatial-spectral reconstruction from frozen
+reconstructor plus downstream classification. The architecture revision is not a
+claim of newly completed training. Existing pins remain unchanged.
