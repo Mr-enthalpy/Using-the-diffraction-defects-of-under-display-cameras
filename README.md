@@ -20,7 +20,7 @@ This Meta Repository is the unified research entry point. It owns research conte
 The current members are:
 
 - **optic_system**: camera/LCD/TLS hardware, calibration, capture and measured PSFs. See [README](optic_system/README.md) and [local rules](optic_system/AGENTS.md).
-- **reconstruction**: offline dataset protocols, measured-PSF simulation, spectral representations and task evaluation. See [README](reconstruction/README.md) and [local rules](reconstruction/AGENTS.md). The admission pin restores its existing published initialization; D2 development proceeds independently on `codex/d2-spatial-spectral`. The admission pin does not include the separate research branch.
+- **reconstruction**: offline dataset protocols, measured-PSF simulation, spectral representations and task evaluation. See [README](reconstruction/README.md) and [local rules](reconstruction/AGENTS.md). The admission pin restores its existing published initialization; current independent research proceeds on `codex/d5-hsfaut-reconstruction`. The admission pin does not include the separate research branch.
 
 This root does not store experimental data, implement optical models or run training. It has no shared Python environment or root build system.
 
@@ -54,9 +54,11 @@ A restored submodule normally has a detached HEAD. Before changing its code, swi
 
 ## Research branch for review
 
-The [D2 report](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d2-spatial-spectral/docs/reports/2026-10-20-d2/README.md)
-and [revised architecture](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d2-spatial-spectral/docs/architecture.md)
-are maintained on the independent reconstruction research branch. The approved
-baseline separates task-independent spatial-spectral reconstruction from frozen
-reconstructor plus downstream classification. The architecture revision is not a
-claim of newly completed training. Existing pins remain unchanged.
+The [D2 report](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfaut-reconstruction/docs/reports/2026-10-20-d2/README.md)
+and [revised architecture](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfaut-reconstruction/docs/architecture.md)
+are retained on the independent reconstruction research branch. Current D5 status
+is recorded in the [D5 experiment report](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfaut-reconstruction/docs/reports/2026-10-21-d5/EXPERIMENT_REPORT.md).
+The approved baseline separates task-independent spatial-spectral reconstruction
+from frozen reconstructor plus downstream classification. The architecture
+revision and pilot results are not a claim of newly accepted training. Existing
+pins remain unchanged.
