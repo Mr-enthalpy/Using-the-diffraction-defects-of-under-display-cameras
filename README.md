@@ -58,6 +58,11 @@ The [D2 report](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfa
 and [revised architecture](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfaut-reconstruction/docs/architecture.md)
 are retained on the independent reconstruction research branch. Current D5 status
 is recorded in the [D5 experiment report](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfaut-reconstruction/docs/reports/2026-10-21-d5/EXPERIMENT_REPORT.md).
+The [D5.2 single-GPU server run](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfaut-reconstruction/docs/reports/2026-10-28-d5.2-server-run/README.md)
+adds 24,800 measured-PSF A6 steps on the acceptance test server (RTX 3090): best-checkpoint
+validation PSNR 30.725 dB, SSIM 0.9400, SAM 9.899°, high-frequency relative L2 0.762. Most
+of the high-frequency gain appears late in training, so the D5 shortfall is mainly a budget
+effect; this is not a frozen-test result and does not replace the 30,000-step amax run.
 The approved baseline separates task-independent spatial-spectral reconstruction
 from frozen reconstructor plus downstream classification. The architecture
 revision and pilot results are not a claim of newly accepted training. Existing
