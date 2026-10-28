@@ -59,10 +59,15 @@ and [revised architecture](https://github.com/Mr-enthalpy/reconstruction/blob/co
 are retained on the independent reconstruction research branch. Current D5 status
 is recorded in the [D5 experiment report](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfaut-reconstruction/docs/reports/2026-10-21-d5/EXPERIMENT_REPORT.md).
 The [D5.2 single-GPU server run](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfaut-reconstruction/docs/reports/2026-10-28-d5.2-server-run/README.md)
-adds 24,800 measured-PSF A6 steps on the acceptance test server (RTX 3090): best-checkpoint
-validation PSNR 30.725 dB, SSIM 0.9400, SAM 9.899°, high-frequency relative L2 0.762. Most
-of the high-frequency gain appears late in training, so the D5 shortfall is mainly a budget
-effect; this is not a frozen-test result and does not replace the 30,000-step amax run.
+adds 24,800 measured-PSF A6 steps on the acceptance test server (RTX 3090), ended by the
+pre-declared patience rule: best-checkpoint validation PSNR 30.725 dB, SSIM 0.9400,
+SAM 9.899°, high-frequency relative L2 0.762. Longer training clearly reduces the early
+high-frequency deficit, but what dominates the remaining error is not established.
+The [S1/S3 matched pair](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfaut-reconstruction/docs/reports/2026-10-28-d5.2-s1-s3/README.md)
+then trained chromatic and achromatic arms under identical data, config and seed: the
+chromatic arm is 0.42 dB better in PSNR and 0.063 lower in high-frequency error, in 9/9
+scenes, while spectral-angle error does not improve. Both remain validation-only results
+without a frozen-test evaluation.
 The approved baseline separates task-independent spatial-spectral reconstruction
 from frozen reconstructor plus downstream classification. The architecture
 revision and pilot results are not a claim of newly accepted training. Existing
