@@ -68,6 +68,16 @@ then trained chromatic and achromatic arms under identical data, config and seed
 chromatic arm is 0.42 dB better in PSNR and 0.063 lower in high-frequency error, in 9/9
 scenes, while spectral-angle error does not improve. Both remain validation-only results
 without a frozen-test evaluation.
+The [D5.3 mechanism block](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5.3-chromatic-mechanism/docs/reports/2026-10-29-d5.3/README.md)
+repeats the pair with three seeds at a uniform 400-epoch budget and adds a
+fixed-wideband counterfactual test. SSIM, spatial-gradient and measurement-residual
+gains pass a pre-registered stability rule in 3/3 seeds; the PSNR and high-frequency
+gains are directionally consistent but fail the scene-consistency clause, and SAM moves
+the other way. The counterfactual result is negative for the spectral-information
+claim: an achromatic operator is exactly blind to zero-sum spectral changes, the
+chromatic difference is invisible per pixel although detectable as an integrated
+pattern, and the frozen reconstructor recovers 1.9% of it with no directional
+agreement. S3 (550 nm) and S4 are not executed.
 The approved baseline separates task-independent spatial-spectral reconstruction
 from frozen reconstructor plus downstream classification. The architecture
 revision and pilot results are not a claim of newly accepted training. Existing
