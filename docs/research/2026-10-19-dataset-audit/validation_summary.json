@@ -1,0 +1,94 @@
+{
+  "manifest_rows": 286,
+  "independent_acquisitions": 145,
+  "subjects": 78,
+  "status_counts": {
+    "accepted_face": 102,
+    "pending_quality_review": 80,
+    "rejected_crop_boundary": 6,
+    "pending_semantic_review": 1,
+    "accepted_non_face": 97
+  },
+  "counts": [
+    {
+      "split": "train",
+      "original": true,
+      "status": "accepted_face",
+      "n": 41
+    },
+    {
+      "split": "train",
+      "original": true,
+      "status": "pending_quality_review",
+      "n": 41
+    },
+    {
+      "split": "test",
+      "original": true,
+      "status": "accepted_face",
+      "n": 9
+    },
+    {
+      "split": "val",
+      "original": true,
+      "status": "accepted_face",
+      "n": 11
+    },
+    {
+      "split": "val",
+      "original": true,
+      "status": "pending_quality_review",
+      "n": 20
+    },
+    {
+      "split": "test",
+      "original": true,
+      "status": "pending_quality_review",
+      "n": 19
+    },
+    {
+      "split": "test",
+      "original": true,
+      "status": "pending_semantic_review",
+      "n": 1
+    },
+    {
+      "split": "train",
+      "original": false,
+      "status": "accepted_face",
+      "n": 41
+    },
+    {
+      "split": "train",
+      "original": true,
+      "status": "accepted_non_face",
+      "n": 39
+    },
+    {
+      "split": "test",
+      "original": true,
+      "status": "accepted_non_face",
+      "n": 9
+    },
+    {
+      "split": "val",
+      "original": true,
+      "status": "accepted_non_face",
+      "n": 10
+    },
+    {
+      "split": "train",
+      "original": false,
+      "status": "accepted_non_face",
+      "n": 39
+    }
+  ],
+  "quality_flag_counts_files": {
+    "source_has_255_review_not_proven_saturation": 68,
+    "possible_band_motion": 18,
+    "visual_expression_or_pose_change": 3,
+    "motion_check_low_confidence": 8
+  },
+  "all_file_hashes_targets_shapes_group_checks_pass": true,
+  "non_face_samples": 100
+}

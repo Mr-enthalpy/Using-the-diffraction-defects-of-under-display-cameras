@@ -1,0 +1,38 @@
+# Public template; local input paths replaced. Not the hashed production configuration.
+archive: LOCAL_AUTHORIZED_UWA_ARCHIVE.zip
+archive_sha256: 34f78b92f496285d8f32374f94a777fae82896b433085d8e0fe40096715b9c53
+samples_index: LOCAL_samples_index.json
+subject_groups: LOCAL_subject_groups.json
+output: built
+wavelengths_nm: [450,460,470,480,490,500,510,520,530,540,550,560,570,580,590,600,610,620,630,640,650]
+reference_wavelength_nm: 550
+crop:
+  side_interocular_factor: 4.0
+  center_below_eye_midpoint_factor: 0.5
+  output_hw: [256,256]
+  interpolation: INTER_AREA
+  padding: forbidden
+pseudo_rgb:
+  wavelengths_nm: [650,550,450]
+  scale: original_DN_div_255
+  purpose: uncalibrated_location_and_preview_only
+quality:
+  phase_gradient_translation_flag_px: 4.0
+  phase_min_response: 0.2
+  threshold_role: conservative_review_trigger_not_calibrated_registration_acceptance
+negative_crop:
+  crop_xywh: [0,768,256,256]
+  source: same_acquisition_as_accepted_face
+  annotation: agent_visual_review_reference_and_450_650_endpoint_previews
+  scope: clothing_and_shared_backdrop_only
+  unverified_general_face_detection: true
+augmentation:
+  train_only: true
+  variants_per_parent: 1
+  seed_namespace: D1-Data-20261019
+  horizontal_flip_probability: 0.5
+  brightness_uniform_range: [0.95,1.05]
+  translation_px: 0
+  scale_change: 0
+  rotation_deg: 0
+  reason: only flip_and_shared_brightness_used_to_preserve_full_face_geometry

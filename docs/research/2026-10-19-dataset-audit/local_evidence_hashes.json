@@ -1,0 +1,49 @@
+{
+  "scope": "SHA-256 of local evidence; hashes do not grant access or prove scientific validity",
+  "files": {
+    "dataset_build.py": {
+      "bytes": 13630,
+      "sha256": "7006d896e8d998d93660ff00f4ce7a18d9064d816e95e27bd6c93133c21ab8f3"
+    },
+    "validate_build.py": {
+      "bytes": 2463,
+      "sha256": "14f83c2d122ace4d64cb1bacd65972cca84ca29ab8d6099ce82a5be374c44634"
+    },
+    "oracle_check.py": {
+      "bytes": 2790,
+      "sha256": "ceebd9d65886b7debe17e867bf450830bf14aa91dca628f99051e7aa02c6638e"
+    },
+    "preprocessing_config.yaml": {
+      "bytes": 1417,
+      "sha256": "34e9e36bca5c67b8cb9f652f2fbf85ec648dd1761184257ae299ea2f5892a90a"
+    },
+    "dataset_manifest.csv": {
+      "bytes": 85633,
+      "sha256": "6b78be9362302780d75319852f4c46a944e5acdaf8ca01a30150fec431888da0"
+    },
+    "splits.json": {
+      "bytes": 5349,
+      "sha256": "a32f71e88bee1379237ae11db68c90fae6e45cf47a5098c5108ac0930ee8aac3"
+    },
+    "review_decisions.json": {
+      "bytes": 10852,
+      "sha256": "779915bb958809f92173f13796c59f03c2fc29cc7d34ab98f5b2acf546b4dccd"
+    },
+    "quality_report.md": {
+      "bytes": 7556,
+      "sha256": "1ae258f5b05e331dc1e92d03c50c0a992aea003a143e3a9c9ea25215034be19c"
+    },
+    "oracle_baseline.md": {
+      "bytes": 2948,
+      "sha256": "f356aec84f2b7bfb7d8289bb5f87df2f2ff43cd9b7de0ea9eea0a4cae3e46bb6"
+    },
+    "validation_summary.json": {
+      "bytes": 2001,
+      "sha256": "0bd841a3b771d6ff3cb7c095a4a8b02dbd797de0c37940dafe05369d7be6db5d"
+    },
+    "oracle_results.json": {
+      "bytes": 4725,
+      "sha256": "e571cd417bb3784d0f095c86dc871d29db5bedb6d779aa4269efcb2379e97ee2"
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "spectrum_raw_dn": {
+    "solver": "scipy.optimize L-BFGS-B, fixed L2 lambda=.01, no tuning, train-only standardization",
+    "converged": true,
+    "metrics": {
+      "val": {
+        "n": 20,
+        "balanced_accuracy": 0.95,
+        "macro_f1": 0.949874686716792,
+        "confusion_matrix_true_rows_pred_cols": [
+          [
+            9,
+            1
+          ],
+          [
+            0,
+            10
+          ]
+        ]
+      },
+      "test": {
+        "n": 18,
+        "balanced_accuracy": 0.9444444444444444,
+        "macro_f1": 0.9442724458204335,
+        "confusion_matrix_true_rows_pred_cols": [
+          [
+            8,
+            1
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      }
+    }
+  },
+  "spectrum_sum1": {
+    "solver": "scipy.optimize L-BFGS-B, fixed L2 lambda=.01, no tuning, train-only standardization",
+    "converged": true,
+    "metrics": {
+      "val": {
+        "n": 20,
+        "balanced_accuracy": 1.0,
+        "macro_f1": 1.0,
+        "confusion_matrix_true_rows_pred_cols": [
+          [
+            10,
+            0
+          ],
+          [
+            0,
+            10
+          ]
+        ]
+      },
+      "test": {
+        "n": 18,
+        "balanced_accuracy": 1.0,
+        "macro_f1": 1.0,
+        "confusion_matrix_true_rows_pred_cols": [
+          [
+            9,
+            0
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      }
+    }
+  },
+  "three_band_proxy_raw": {
+    "solver": "scipy.optimize L-BFGS-B, fixed L2 lambda=.01, no tuning, train-only standardization",
+    "converged": true,
+    "metrics": {
+      "val": {
+        "n": 20,
+        "balanced_accuracy": 0.95,
+        "macro_f1": 0.949874686716792,
+        "confusion_matrix_true_rows_pred_cols": [
+          [
+            9,
+            1
+          ],
+          [
+            0,
+            10
+          ]
+        ]
+      },
+      "test": {
+        "n": 18,
+        "balanced_accuracy": 0.9444444444444444,
+        "macro_f1": 0.9442724458204335,
+        "confusion_matrix_true_rows_pred_cols": [
+          [
+            8,
+            1
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      }
+    }
+  },
+  "three_band_proxy_sum1": {
+    "solver": "scipy.optimize L-BFGS-B, fixed L2 lambda=.01, no tuning, train-only standardization",
+    "converged": true,
+    "metrics": {
+      "val": {
+        "n": 20,
+        "balanced_accuracy": 1.0,
+        "macro_f1": 1.0,
+        "confusion_matrix_true_rows_pred_cols": [
+          [
+            10,
+            0
+          ],
+          [
+            0,
+            10
+          ]
+        ]
+      },
+      "test": {
+        "n": 18,
+        "balanced_accuracy": 0.9444444444444444,
+        "macro_f1": 0.9442724458204335,
+        "confusion_matrix_true_rows_pred_cols": [
+          [
+            8,
+            1
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      }
+    }
+  }
+}
