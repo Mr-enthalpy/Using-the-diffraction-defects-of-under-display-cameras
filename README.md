@@ -20,7 +20,7 @@ This Meta Repository is the unified research entry point. It owns research conte
 The current members are:
 
 - **optic_system**: camera/LCD/TLS hardware, calibration, capture and measured PSFs. See [README](optic_system/README.md) and [local rules](optic_system/AGENTS.md).
-- **reconstruction**: offline dataset protocols, measured-PSF simulation, spectral representations and task evaluation. See [README](reconstruction/README.md) and [local rules](reconstruction/AGENTS.md). The admission pin now points at the member `main` commit that carries the merged D5.3 block (`aeccd48`); the independent research that used to live on `codex/*` branches is merged there and those branches are deleted. `optic_system` keeps its previously admitted pin. Branch names quoted inside older member reports are historical.
+- **reconstruction**: offline dataset protocols, measured-PSF simulation, spectral representations and task evaluation. See [README](reconstruction/README.md) and [local rules](reconstruction/AGENTS.md). The admission pin now points at the member `main` commit that carries the merged D5.3 block and the report corrections (`ef07c1b`); the independent research that used to live on `codex/*` branches is merged there and those branches are deleted. `optic_system` keeps its previously admitted pin. Branch names quoted inside older member reports are historical.
 
 This root does not store experimental data, implement optical models or run training. It has no shared Python environment or root build system.
 
@@ -86,10 +86,11 @@ is therefore reported as a direction with limited stability, not as a win. The
 [S3 control](https://github.com/Mr-enthalpy/reconstruction/blob/main/docs/reports/2026-10-29-d5.3/s3_control_analysis.md)
 then replaced the mean kernel with a real 550 nm band kernel, same code, same
 budget, three seeds: the direction does not flip and six of eight metrics now pass
-the rule, so the mean kernel's frequency response is not the explanation. The
-larger gap is entirely due to the 550 nm reference arm being weaker (0.127 dB), so
-the S1 figure of +0.32 dB remains the conservative one and no "+0.44 dB" claim is
-made. S4 is not executed.
+the rule, so the spatial advantage does not depend on that particular mean-kernel
+choice. Two band-independent references do not rule out frequency-response effects
+in general, and the larger gap is entirely due to the 550 nm reference arm being
+weaker (0.127 dB), so the S1 figure of +0.32 dB remains the conservative one and no
+"+0.44 dB" claim is made. S4 is not executed.
 The approved baseline separates task-independent spatial-spectral reconstruction
 from frozen reconstructor plus downstream classification. The architecture
 revision and pilot results are not a claim of newly accepted training. Existing
