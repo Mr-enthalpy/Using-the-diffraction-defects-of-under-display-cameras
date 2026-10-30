@@ -20,7 +20,7 @@ This Meta Repository is the unified research entry point. It owns research conte
 The current members are:
 
 - **optic_system**: camera/LCD/TLS hardware, calibration, capture and measured PSFs. See [README](optic_system/README.md) and [local rules](optic_system/AGENTS.md).
-- **reconstruction**: offline dataset protocols, measured-PSF simulation, spectral representations and task evaluation. See [README](reconstruction/README.md) and [local rules](reconstruction/AGENTS.md). The admission pin restores its existing published initialization; current independent research proceeds on `codex/d5-hsfaut-reconstruction`. The admission pin does not include the separate research branch.
+- **reconstruction**: offline dataset protocols, measured-PSF simulation, spectral representations and task evaluation. See [README](reconstruction/README.md) and [local rules](reconstruction/AGENTS.md). The admission pin still restores its published initialization (`b6668a5`); the independent research that used to live on `codex/*` branches is now merged into the member's `main` and those branches have been deleted. Advancing the pin to the merged commit is a separate, still pending decision, and the branch names quoted inside older member reports are historical.
 
 This root does not store experimental data, implement optical models or run training. It has no shared Python environment or root build system.
 
@@ -54,21 +54,21 @@ A restored submodule normally has a detached HEAD. Before changing its code, swi
 
 ## Research branch for review
 
-The [D2 report](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfaut-reconstruction/docs/reports/2026-10-20-d2/README.md)
-and [revised architecture](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfaut-reconstruction/docs/architecture.md)
+The [D2 report](https://github.com/Mr-enthalpy/reconstruction/blob/main/docs/reports/2026-10-20-d2/README.md)
+and [revised architecture](https://github.com/Mr-enthalpy/reconstruction/blob/main/docs/architecture.md)
 are retained on the independent reconstruction research branch. Current D5 status
-is recorded in the [D5 experiment report](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfaut-reconstruction/docs/reports/2026-10-21-d5/EXPERIMENT_REPORT.md).
-The [D5.2 single-GPU server run](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfaut-reconstruction/docs/reports/2026-10-28-d5.2-server-run/README.md)
+is recorded in the [D5 experiment report](https://github.com/Mr-enthalpy/reconstruction/blob/main/docs/reports/2026-10-21-d5/EXPERIMENT_REPORT.md).
+The [D5.2 single-GPU server run](https://github.com/Mr-enthalpy/reconstruction/blob/main/docs/reports/2026-10-28-d5.2-server-run/README.md)
 adds 24,800 measured-PSF A6 steps on the acceptance test server (RTX 3090), ended by the
 pre-declared patience rule: best-checkpoint validation PSNR 30.725 dB, SSIM 0.9400,
 SAM 9.899°, high-frequency relative L2 0.762. Longer training clearly reduces the early
 high-frequency deficit, but what dominates the remaining error is not established.
-The [S1/S3 matched pair](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5-hsfaut-reconstruction/docs/reports/2026-10-28-d5.2-s1-s3/README.md)
+The [S1/S3 matched pair](https://github.com/Mr-enthalpy/reconstruction/blob/main/docs/reports/2026-10-28-d5.2-s1-s3/README.md)
 then trained chromatic and achromatic arms under identical data, config and seed: the
 chromatic arm is 0.42 dB better in PSNR and 0.063 lower in high-frequency error, in 9/9
 scenes, while spectral-angle error does not improve. Both remain validation-only results
 without a frozen-test evaluation.
-The [D5.3 mechanism block](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5.3-chromatic-mechanism/docs/reports/2026-10-29-d5.3/README.md)
+The [D5.3 mechanism block](https://github.com/Mr-enthalpy/reconstruction/blob/main/docs/reports/2026-10-29-d5.3/README.md)
 repeats the pair with three seeds at a uniform 400-epoch budget and adds a
 fixed-wideband counterfactual test. SSIM, spatial-gradient and measurement-residual
 gains pass a pre-registered stability rule in 3/3 seeds; the PSNR and high-frequency
@@ -77,13 +77,13 @@ the other way. The counterfactual result is negative for the spectral-informatio
 claim: an achromatic operator is exactly blind to zero-sum spectral changes, the
 chromatic difference is invisible per pixel although detectable as an integrated
 pattern, and the frozen reconstructor recovers 1.9% of it with no directional
-agreement. A [per-band breakdown](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5.3-chromatic-mechanism/docs/reports/2026-10-29-d5.3/per_band_analysis.md)
+agreement. A [per-band breakdown](https://github.com/Mr-enthalpy/reconstruction/blob/main/docs/reports/2026-10-29-d5.3/per_band_analysis.md)
 adds one dimension that moves opposite to the spectral-angle error: the chromatic
 arm is lower in 21/21 bands and in all three seeds, and 19/21 bands clear the
 cross-seed spread, but only 6/21 also pass the per-seed scene-consistency clause,
 so the 450/460 nm and 600-650 nm bands are explicitly not claimed. The dimension
 is therefore reported as a direction with limited stability, not as a win. The
-[S3 control](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5.3-chromatic-mechanism/docs/reports/2026-10-29-d5.3/s3_control_analysis.md)
+[S3 control](https://github.com/Mr-enthalpy/reconstruction/blob/main/docs/reports/2026-10-29-d5.3/s3_control_analysis.md)
 then replaced the mean kernel with a real 550 nm band kernel, same code, same
 budget, three seeds: the direction does not flip and six of eight metrics now pass
 the rule, so the mean kernel's frequency response is not the explanation. The
