@@ -20,7 +20,7 @@ This Meta Repository is the unified research entry point. It owns research conte
 The current members are:
 
 - **optic_system**: camera/LCD/TLS hardware, calibration, capture and measured PSFs. See [README](optic_system/README.md) and [local rules](optic_system/AGENTS.md).
-- **reconstruction**: offline dataset protocols, measured-PSF simulation, spectral representations and task evaluation. See [README](reconstruction/README.md) and [local rules](reconstruction/AGENTS.md). The admission pin still restores its published initialization (`b6668a5`); the independent research that used to live on `codex/*` branches is now merged into the member's `main` and those branches have been deleted. Advancing the pin to the merged commit is a separate, still pending decision, and the branch names quoted inside older member reports are historical.
+- **reconstruction**: offline dataset protocols, measured-PSF simulation, spectral representations and task evaluation. See [README](reconstruction/README.md) and [local rules](reconstruction/AGENTS.md). The admission pin now points at the member `main` commit that carries the merged D5.3 block (`aeccd48`); the independent research that used to live on `codex/*` branches is merged there and those branches are deleted. `optic_system` keeps its previously admitted pin. Branch names quoted inside older member reports are historical.
 
 This root does not store experimental data, implement optical models or run training. It has no shared Python environment or root build system.
 
