@@ -82,8 +82,14 @@ adds one dimension that moves opposite to the spectral-angle error: the chromati
 arm is lower in 21/21 bands and in all three seeds, and 19/21 bands clear the
 cross-seed spread, but only 6/21 also pass the per-seed scene-consistency clause,
 so the 450/460 nm and 600-650 nm bands are explicitly not claimed. The dimension
-is therefore reported as a direction with limited stability, not as a win. S3
-(550 nm) and S4 are not executed.
+is therefore reported as a direction with limited stability, not as a win. The
+[S3 control](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5.3-chromatic-mechanism/docs/reports/2026-10-29-d5.3/s3_control_analysis.md)
+then replaced the mean kernel with a real 550 nm band kernel, same code, same
+budget, three seeds: the direction does not flip and six of eight metrics now pass
+the rule, so the mean kernel's frequency response is not the explanation. The
+larger gap is entirely due to the 550 nm reference arm being weaker (0.127 dB), so
+the S1 figure of +0.32 dB remains the conservative one and no "+0.44 dB" claim is
+made. S4 is not executed.
 The approved baseline separates task-independent spatial-spectral reconstruction
 from frozen reconstructor plus downstream classification. The architecture
 revision and pilot results are not a claim of newly accepted training. Existing
