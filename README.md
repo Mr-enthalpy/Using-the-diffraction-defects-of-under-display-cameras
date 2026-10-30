@@ -78,11 +78,12 @@ claim: an achromatic operator is exactly blind to zero-sum spectral changes, the
 chromatic difference is invisible per pixel although detectable as an integrated
 pattern, and the frozen reconstructor recovers 1.9% of it with no directional
 agreement. A [per-band breakdown](https://github.com/Mr-enthalpy/reconstruction/blob/codex/d5.3-chromatic-mechanism/docs/reports/2026-10-29-d5.3/per_band_analysis.md)
-of the D5.2 pair adds one dimension that moves opposite to the spectral-angle error:
-the chromatic arm is lower in 21/21 bands, 19/21 above the scene-level spread and
-11/21 unanimous across scenes, with the 450 and 460 nm bands explicitly not claimed.
-It is a single-seed result, so it is reported as a direction to re-check, not as
-seed-level evidence. S3 (550 nm) and S4 are not executed.
+adds one dimension that moves opposite to the spectral-angle error: the chromatic
+arm is lower in 21/21 bands and in all three seeds, and 19/21 bands clear the
+cross-seed spread, but only 6/21 also pass the per-seed scene-consistency clause,
+so the 450/460 nm and 600-650 nm bands are explicitly not claimed. The dimension
+is therefore reported as a direction with limited stability, not as a win. S3
+(550 nm) and S4 are not executed.
 The approved baseline separates task-independent spatial-spectral reconstruction
 from frozen reconstructor plus downstream classification. The architecture
 revision and pilot results are not a claim of newly accepted training. Existing
